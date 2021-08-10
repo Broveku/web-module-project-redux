@@ -16,10 +16,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state, movies: [...state.movies , action.payload]
             }
-        // case TOGGLE_FAVORITES:
-        //     return{
-        //         ...state, 
-        //     }
+        
         default:
             return state;
 
