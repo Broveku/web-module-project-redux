@@ -1,4 +1,4 @@
-import { ADD_FAVORITES,  DEL_FAVORITES } from "../actions/favActions"
+import { ADD_FAVORITES,  DEL_FAVORITES, TOGGLE_FAVORITES } from "../actions/favActions"
 import movies from "../data"
 
 const initialState ={
@@ -17,6 +17,10 @@ const favReducer = (state = initialState, action) =>{
         case DEL_FAVORITES:
             return{
                 favorites: state.favorites.filter((item) =>action.payload !==item.id)
+            }
+        case TOGGLE_FAVORITES:
+            return{
+                ...state, displayFavorites: action.payload
             }
         default:
             return state

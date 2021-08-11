@@ -1,5 +1,5 @@
 
-export const TOGGLE_FAVORITES = 'TOGGLE_FAVORITES'
+export const TOGGLE_FAVORITES = 'TOGGLE_FAVORITE'
 export const ADD_FAVORITES = 'ADD_FAVORITES'
 export const DEL_FAVORITES = 'DEL_FAVORITES'
 
@@ -13,6 +13,6 @@ export const delFavorite = (id) =>{
 
 }
 
-export const toggleFavorite = (id)=>{
-    return({type:TOGGLE_FAVORITES, payload:id})
+export const toggleFavorite = (boolean)=>{
+    return({type:TOGGLE_FAVORITES, payload:boolean})
 }
